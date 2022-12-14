@@ -8,7 +8,7 @@ userForm.loginFormCallback = (data) => {
     if (response.success) {
       location.reload();
     } else {
-      setLoginErrorMessage(message);
+      userForm.setLoginErrorMessage(response.error);
     }
   });
 }
@@ -18,7 +18,7 @@ userForm.registerFormCallback = (data) => {
     if (response.success) {
       location.reload();
     } else {
-      setRegisterErrorMessage(response.error);
+      userForm.setRegisterErrorMessage(response.error);
     }
   });
 }
